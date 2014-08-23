@@ -29,11 +29,11 @@ $form->setForm('../forms/formDefault')
 	 ->getForm();
 
 $button = new Button();
-$button->setButtonType('Button')
+$button->setButtonType('submit')
 		->setButtonColor('primary')
 		->setButtonTitle('Nova')
 		->setButtonIco('plus');
-		#->show();
+		
 		
 		
 $painel2 = new Painel();

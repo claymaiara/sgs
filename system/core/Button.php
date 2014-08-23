@@ -15,9 +15,6 @@ class Button implements IButton
 	
 	private $buttonUrl;
 	
-	
-	
-	
 	/**
 	 * 
 	 * @param string $title
@@ -92,7 +89,7 @@ class Button implements IButton
 		if($show){
 			
 		
-		echo("<button type='{$this->getButtonType()}' class=' btn btn-{$this->getButtonColor()}'>
+		echo("<button type='{$this->getButtonType()}' value='index.php' class=' btn btn-{$this->getButtonColor()}'>
 					<span class='glyphicon glyphicon-{$this->getButtonIco()}'></span>
 					{$this->getButtonTitle()} </button>");
 			

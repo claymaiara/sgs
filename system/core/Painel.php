@@ -11,7 +11,7 @@ class Painel
 	
 	private $grid;
 	
-	private $form;
+	private $button;
 	
 	
 	/**
@@ -54,7 +54,14 @@ class Painel
 		return $this;	
 	}
 	
-
+	public function addButton(IButton $button)
+	{
+		$this->button = $button;
+		return $this;
+	}
+	
+	
+	
 	
 	private function validateGrid($show)
 	{
@@ -64,6 +71,13 @@ class Painel
 		return '';
 	}
 	
+	private function validateButton($show)
+	{
+		if($this->button instanceof IButton){
+			return $this->button->show($show);
+		}
+		return '';
+	}
 	public function show($show=true)
 	{
 		if($show){
@@ -75,6 +89,7 @@ class Painel
 					</div>
 			  	<div class='panel-body'>");
 			$this->validateGrid($show);
+			$this->validateButton($show);
 		  echo("</div>
 			  </div>");
 		}

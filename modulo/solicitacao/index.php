@@ -5,6 +5,7 @@ use system\model\TbFuncionarios;
 use system\core\Painel;
 use system\core\GridOption;
 use system\core\FormController;
+use system\core\Button;
 
 include_once '../../bootstrap.php';
 include_once 'config.php';
@@ -27,16 +28,25 @@ $form = new FormController();
 $form->setForm('../forms/formDefault')
 	 ->getForm();
 
+$button = new Button();
+$button->setButtonType('Button')
+		->setButtonColor('primary')
+		->setButtonTitle('Nova')
+		->setButtonIco('plus');
+		#->show();
+		
+		
 $painel2 = new Painel();
-$painel2->setPainelTitle('Pesquisar')
-		->setPainelColor('info')
+$painel2->setPainelTitle('Solicitações')
+		->setPainelColor('primary')
+		->addButton($button)
 		->show(!isset($_SESSION['action']));
 
 
 
 $painel = new Painel();
-$painel->setPainelTitle('Lista de Funcionarios')
-		->setPainelColor('info')
+$painel->setPainelTitle('Lista de Solicitações')
+		->setPainelColor('primary')
 		->addGrid($grid)
 		->show(!isset($_SESSION['action']));
 		

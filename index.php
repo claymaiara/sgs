@@ -1,3 +1,3 @@
 <?php
 
-header('location: /sgs/modulo/solicitacao/');
+header('location: /sgs/modulo/administracao');

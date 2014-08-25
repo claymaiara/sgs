@@ -25,20 +25,20 @@
 								use system\core\ActionController as A;
 								echo A::actionUrl()->setProjecName($configGlobal['projectName'])
 								               ->setUrlModulo('administracao')
-								               ->setUrlAction('cadastrar/doca')
+								               ->setUrlAction('cadastrar/sistema')
 								               ->setValue(rand(1,100))
 								               ->getUrl();
 								?>"><span class="glyphicon glyphicon-list-alt"></span>
 										Sistema
 									</a>
 								<li><a href="<?php 
-								A::actionUrl()->setProjecName($configGlobal['projectName'])->setUrlModulo('administracao')->setUrlAction('Cadastrar/doca')->getUrl();
+								A::actionUrl()->setProjecName($configGlobal['projectName'])->setUrlModulo('administracao')->setUrlAction('Cadastrar/doca2')->getUrl();
 								?>"><span class="glyphicon glyphicon-list-alt"></span>
 										Novo 2
 									</a>									
 								</li>
 								<li><a href="<?php 
-								A::actionUrl()->setUrlAction('Cadastrar/doca')
+								A::actionUrl()->setUrlAction('Cadastrar/doca3')
 								              ->getUrl();
 								?>"><span class="glyphicon glyphicon-list-alt"></span>
 										Novo 3
@@ -82,9 +82,9 @@
 							</button>
 							<ul class="dropdown-menu" role="menu">
 								<li>
-									<a href="RelatorioAdm.php"><span class="glyphicon glyphicon-list-alt">
+									<a href="RelatorioSistemas.php"><span class="glyphicon glyphicon-list-alt">
 										</span>
-										Relatorio Um
+										Sistemas 
 										</a>
 										</li>
 								<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>

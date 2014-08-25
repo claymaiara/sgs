@@ -6,6 +6,8 @@ use Respect\Validation\Validator as v;
 use system\core\PostController;
 use system\model\TbUsuario;
 use system\entity\Doca;
+use system\entity\Sistema;
+use system\model\TbSistema;
 
 class AcceptFormAdministracao extends PostController
 {
@@ -14,19 +16,18 @@ class AcceptFormAdministracao extends PostController
 
 		try {
 			
-			v::string()->email()
-					   ->notEmpty()
-					   ->setName('Doca')
+			v::string()->notEmpty()
+					   ->setName('Sistema')
 					   ->setTemplate('O campo {{name}} é obrigatório')
-					   ->assert($this->post['doca']);
+					   ->assert($this->post['sistema']);
 					   
 			try {
 
-			    $Doca = new Doca();
-			    $Doca->setName($this->post['doca']);
+			    $sistema = new Sistema();
+			    $sistema->setName($this->post['sistema']);
 			    
- 				$tbUser = new TbUsuario();
-				$dados = $tbUser->save($Doca);
+ 				$tbSistema = new TbSistema();
+				$dados = $tbSistema->save($sistema);
 				return $this;
 			   } catch (Exception $e) {
 			   }

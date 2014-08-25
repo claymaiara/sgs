@@ -6,7 +6,7 @@ abstract class DataBase
 	private $user = 'root';
 	private $password = 'root';
 	private $tipobanco = 'mysql';
-	private $database = 'phpintermediario';
+	private $database = 'sgs';
 	private $server =  'localhost';
 
 	/** 

@@ -6,6 +6,7 @@ use system\core\Painel;
 use system\core\GridOption;
 use system\core\FormController;
 use system\core\Button;
+use system\core\ActionController;
 
 include_once '../../bootstrap.php';
 include_once 'config.php';
@@ -41,7 +42,6 @@ $painel2->setPainelTitle('Solicitações')
 		->setPainelColor('primary')
 		->addButton($button)
 		->show(!isset($_SESSION['action']));
-
 
 
 $painel = new Painel();

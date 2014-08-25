@@ -11,8 +11,9 @@ include_once '../../bootstrap.php';
 include_once 'config.php';
 include '../../componente/topo.php';
 include '../../componente/menuprincipal.php';
+include 'ModuloAdministracao.php';
 
-$button = new Button();
+/*$button = new Button();
 $button->setButtonType('Button')
 		->setButtonColor('primary')
 		->setButtonTitle('Nova')
@@ -23,7 +24,12 @@ $painel = new Painel();
 $painel->setPainelTitle('Administração')
 		->setPainelColor('primary')
 		->addButton($button)
-		->show(!isset($_SESSION['action']));
+		->show(!isset($_SESSION['action'])); */
+
+
+$form = new FormController();
+$form->setForm()
+->getForm();
 		
 
 include '../../componente/rodape.php';

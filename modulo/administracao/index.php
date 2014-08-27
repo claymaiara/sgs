@@ -17,6 +17,10 @@ $form = new FormController();
 $form->setForm()
 	 ->getForm();
 
+/*$form = new FormController();
+$form->setForm('../forms/formDefault')
+->getForm(); */
+
 #include 'forms/alterar/sistemaAlterar.php';
 
 

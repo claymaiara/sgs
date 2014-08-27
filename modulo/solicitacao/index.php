@@ -13,6 +13,7 @@ include_once 'config.php';
 include '../../componente/topo.php';
 include '../../componente/menuprincipal.php';
 
+/*
 $coluns = array('','id','nome', 'email', 'endereço', 'telefone');
 
 $users = new TbFuncionarios();
@@ -50,5 +51,5 @@ $painel->setPainelTitle('Lista de Solicitações')
 		->addGrid($grid)
 		->show(!isset($_SESSION['action']));
 		
-
+*/
 include '../../componente/rodape.php';

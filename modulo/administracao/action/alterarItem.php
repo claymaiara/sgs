@@ -1,16 +1,15 @@
 <?php
 require_once '../../../bootstrap.php';
 
-use system\app\AcceptForm;
+use system\app\AcceptFormAdministracao as Post;
 use system\core\FormController;
-
 try {
 	
-    $get = new AcceptForm();
-    
-    $get->setpost($_POST)
-        ->alterarDoca()
-        ->clearPost('Alterado Com sucesso');
+    $post = new Post();
+	
+	$post->setpost($_POST)
+	     ->alterarSistema()
+	    ->clearPost('Atualizado com sucesso');
     
 } catch (Exception $e) {
     

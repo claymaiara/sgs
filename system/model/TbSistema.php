@@ -29,7 +29,7 @@ class TbSistema extends DataBase
 	{
 	    try {
 	        	
-	        $stmt = $this->conexao->prepare('SELECT * FROM tb_sistema WHERE id = ?');
+	        $stmt = $this->conexao->prepare('SELECT * FROM tb_sistema WHERE sis_codigo = ?');
 	        	
 	        $stmt->bindParam(1, $codigo,\PDO::PARAM_INT);
 	        
@@ -62,17 +62,17 @@ class TbSistema extends DataBase
 	    }
 	}
 	
-	public function update(system\entity\Doca $Doca)
+	public function update(system\entity\Sistema $sistema)
 	{
 	     
 	    try {
 	
-	        $statement = ("UPDATE test set test_descripton = :test_descripton
-	                       WHERE cod_test = :cod_test");
+	        $statement = ("UPDATE tb_sistema set sis_descricao = :sis_descricao
+	                       WHERE sis_codigo = :sis_codigo");
 	        $stmt = $this->conexao->prepare($statement);
 	
-	        $stmt->bindParam(':test_descripton', $Doca->getName(),\PDO::PARAM_STR);
-	        $stmt->bindParam(':cod_test', $Doca->getId(),\PDO::PARAM_INT);
+	        $stmt->bindParam(':sis_descricao', $sistema->getName(),\PDO::PARAM_STR);
+	        $stmt->bindParam(':sis_codigo', $sistema->getId(),\PDO::PARAM_INT);
 	        	         
 	        $stmt->execute();
 	         

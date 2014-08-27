@@ -1,7 +1,6 @@
 <?php
 require_once '../../../bootstrap.php';
 
-
 use system\app\AcceptFormAdministracao as Post;
 use system\core\FormController;
 
@@ -37,6 +36,5 @@ try {
     	);
     }
 }
-
 
 header('location: '.$_SERVER['HTTP_REFERER']);

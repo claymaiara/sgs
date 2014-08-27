@@ -25,9 +25,9 @@
 			</nav>
 			<nav class="navbar navbar-default" role="navigation">
 			<?php 
-					/*use system\core\Error as M;
+					use system\core\Error as M;
 					$Message = new M();
-					$Message->showMessages();*/
+					$Message->showMessages();
 					?>
 			</nav>
 

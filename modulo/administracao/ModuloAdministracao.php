@@ -25,16 +25,16 @@
 								use system\core\ActionController as A;
 								echo A::actionUrl()->setProjecName($configGlobal['projectName'])
 								               ->setUrlModulo('administracao')
-								               ->setUrlAction('cadastrar/sistema')
+								               ->setUrlAction('alterar/sistemaAlterar')
 								               ->setValue(rand(1,100))
 								               ->getUrl();
 								?>"><span class="glyphicon glyphicon-list-alt"></span>
 										Sistema
 									</a>
 								<li><a href="<?php 
-								A::actionUrl()->setProjecName($configGlobal['projectName'])->setUrlModulo('administracao')->setUrlAction('Cadastrar/doca2')->getUrl();
+								A::actionUrl()->setProjecName($configGlobal['projectName'])->setUrlModulo('administracao')->setUrlAction('alterar/sistemaAlterar')->setValue(rand(1,100))->getUrl();
 								?>"><span class="glyphicon glyphicon-list-alt"></span>
-										Novo 2
+										Alterar Sistema
 									</a>									
 								</li>
 								<li><a href="<?php 

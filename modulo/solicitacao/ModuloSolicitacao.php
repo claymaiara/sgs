@@ -25,7 +25,7 @@
 								use system\core\ActionController as A;
 								echo A::actionUrl()->setProjecName($configGlobal['projectName'])
 								               ->setUrlModulo('administracao')
-								               ->setUrlAction('forms/solicitacao')
+								               ->setUrlAction('cadastrar/solicitacao')
 								               ->setValue(rand(1,100))
 								               ->getUrl();
 								?>"><span class="glyphicon glyphicon-list-alt"></span>
